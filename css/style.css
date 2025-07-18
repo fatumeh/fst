@@ -21,3 +21,42 @@ p {
     word-spacing: 2px;
     text-indent: 10px;
 }
+
+.container {
+    width: 1200px;
+    height: 1200px;
+    background: dodgerblue;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid tomato;
+    position: relative;
+}
+
+.box1 {
+    background-color: crimson;
+    position: fixed;
+    left: 0;
+    z-index: 2;
+}
+
+.box2 {
+    background-color: aquamarine;
+    position: fixed;
+    left: 100px;
+    top: 280px;
+    z-index: 1;
+    border: 4px solid crimson;
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.box3 {
+    background-color: aqua;
+    position: fixed;
+    left: 200px;
+    top: 380px;
+    z-index: 3;
+}

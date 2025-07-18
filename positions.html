@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Positions</title>
+</head>
+<style>
+    /* reset css */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* general style */
+    
+    body {
+        font-family: sans-serif;
+        background: #ccc;
+        color: #333;
+        line-height: 1.6;
+    }
+    /* header section */
+    
+    .container {
+        text-align: center;
+        background: #333;
+        color: #fff;
+        margin-bottom: 200px;
+    }
+    
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        border-radius: 10px;
+        width: 280px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0).1;
+    }
+    
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .product-title {
+        font-size: 1.4rem;
+        margin: 15px 0;
+    }
+    
+    .product-desc {
+        font-size: 1rem;
+        color: #7777;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+    
+    .product-btn {
+        border: none;
+        padding: 1em 2em;
+        color: white;
+        background: dodgerblue;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="postion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quod totam ducimus facere culpa impedit iusto voluptates labore excepturi. Cumque eaque consectetur animi sapiente sit a voluptates repellendus? Distinctio, quis.
+        </div>
+    </div>
+
+    <!-- display flex layout -->
+    <div class="product-container">
+        <div class="product-card"><img src="https://i.pinimg.com/736x/4e/05/49/4e0549d1a58f45b975fc284f3b7f45ba.jpg" class="product-img" alt="">
+            <h1 class="product-title">
+                product 1
+            </h1>
+            <p class="product-desc">
+                this is a great product with a amazing features
+            </p>
+            <button class="product-btn">Add to Card</button>
+        </div>
+        <!-- product 2 -->
+        <div class="product-card"><img src="https://i.pinimg.com/736x/8b/1c/cc/8b1ccc83cc3fe1035efc1c46df55886b.jpg" class="product-img" alt="">
+            <h1 class="product-title">
+                product 1
+            </h1>
+            <p class="product-desc">
+                this is a great product with a amazing features
+            </p>
+            <button class="product-btn">Add to Card</button>
+
+        </div>
+        <!-- product 3 -->
+        <div class="product-card"><img src="https://i.pinimg.com/1200x/2f/62/58/2f625874e6a6b56b315ed5ed1f818ebc.jpg" class="product-img" alt="">
+            <h1 class="product-title">
+                product 1
+            </h1>
+            <p class="product-desc">
+                this is a great product with a amazing features
+            </p>
+            <button class="product-btn">Add to Card</button>
+        </div>
+    </div>
+</body>
+
+</html>
