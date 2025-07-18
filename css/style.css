@@ -12,19 +12,6 @@ h1 {
     text-shadow: 8px 5px 2px crimson;
 }
 
-
-/* p {
-    font-family: display;
-    font-size: 24px;
-    word-spacing: 10;
-    margin-left: 10px;
-    border-left: 3px solid tomato;
-    padding-left: 0.25em;
-    /* border-radius: 4px; */
-
-
-/* } */
-
 p {
     color: #444;
     font: 400 18px/5.6 'Roboto', sans-serif;
