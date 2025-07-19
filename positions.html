@@ -45,7 +45,8 @@
         background: white;
         border-radius: 10px;
         width: 280px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0).1;
+        border-radius: 10% 0 3% 40%;
+        box-shadow: 10px 40px 10px rgba(0, 0, 0, 0.1);
     }
     
     img {
@@ -73,6 +74,65 @@
         background: dodgerblue;
         border-radius: 10px;
     }
+    
+    .clip-circle {
+        width: 20px;
+        height: 20px;
+        background: coral;
+        clip-path: circle(50% at 50% 50%);
+    }
+    
+    .typewriter {
+        width: 0;
+        overflow: hidden;
+        border-right: 2px solid black;
+        white-space: nowrap;
+        font-family: monospace;
+        font-size: 24px;
+        animation: typing 3s steps(13) forwards, blink 0.5s step-end infinite;
+    }
+    
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 13ch;
+        }
+        /* 13 characters */
+    }
+    
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+    
+    .typewriters {
+        font-family: monospace;
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid black;
+        width: 0;
+        animation: typing 3s steps(13) 1s infinite alternate, blink 0.5s step-end infinite;
+    }
+    
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 13ch;
+        }
+        /* 13 characters in "Hello, world!" */
+    }
+    
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
 </style>
 
 <body>
@@ -81,7 +141,12 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quod totam ducimus facere culpa impedit iusto voluptates labore excepturi. Cumque eaque consectetur animi sapiente sit a voluptates repellendus? Distinctio, quis.
         </div>
     </div>
+    <div class="typewriters">Hello, world!</div>
 
+    <div class="typewriter">Hello, world!</div>
+
+
+    <div class="clip-circle"></div>
     <!-- display flex layout -->
     <div class="product-container">
         <div class="product-card"><img src="https://i.pinimg.com/736x/4e/05/49/4e0549d1a58f45b975fc284f3b7f45ba.jpg" class="product-img" alt="">
