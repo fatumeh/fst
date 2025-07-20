@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex box</title>
+</head>
+<style>
+    /* reset css */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* general style */
+    
+    body {
+        font-family: monospace;
+        font-size: 24px;
+        background: #f0f0f0;
+        color: #333;
+        line-height: 1.6;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    span {
+        font-size: 20px;
+        font-size: small;
+    }
+    
+    button {
+        border: none;
+        background: dodgerblue;
+        color: white;
+        padding: 1em 2em;
+        border-radius: 1000px;
+    }
+    
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        /* margin: 0 auto; */
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    /*header style  */
+    
+    .header {
+        background: #333;
+        color: honeydew;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    /* layout style */
+    
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 40px 20px 0;
+    }
+    
+    .products {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+        flex: 1 0 auto;
+        /* flex: 1 1 calc(33.333% - 40px);
+        max-width: calc(33.333% -40px); */
+        box-sizing: border-box;
+        background: honeydew;
+        /* padding: 20px; */
+        text-align: center;
+    }
+    /* .products:hover {
+        transform: translateX(100px);
+        transform: scale(1.1);
+    } */
+    
+    .price-pro {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .products {
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+    }
+</style>
+
+<body>
+    <header class="header">
+        <h1>display flex layout</h1>
+    </header>
+    <div class="products-container">
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/94/bd/04/94bd0462c0f2f2a82a5927a0f73d0633.jpg" class="pro-img" />
+            <h1>Bag</h1>
+            <p class="product-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illum.
+            </p>
+            <div class="price-pro">
+                <span>$12.3</span>
+                <button>Order Now</button>
+            </div>
+        </div>
+        <!-- product item 2 -->
+        <div class="products">
+            <img src="https://i.pinimg.com/1200x/eb/c2/4f/ebc24fbd0ede866b25d65c404b86d5e9.jpg" class="pro-img" />
+            <h1>Bag</h1>
+            <p class="product-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illum.
+            </p>
+            <div class="price-pro">
+                <span>$12.3</span>
+                <button>Order Now</button>
+            </div>
+        </div>
+        <!-- product item 3 -->
+        <div class="products">
+            <img src="https://i.pinimg.com/1200x/ae/0c/c1/ae0cc136636dc6157a26967475f7a433.jpg" class="pro-img" />
+            <h1>Bag</h1>
+            <p class="product-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illum.
+            </p>
+            <div class="price-pro">
+                <span>$12.3</span>
+                <button>Order Now</button>
+            </div>
+        </div>
+        <!-- product item 4 -->
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/75/08/d6/7508d6e33560b0efe06efd86a8e44a01.jpg" class="pro-img" />
+            <h1>Bag</h1>
+            <p class="product-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illum.
+            </p>
+            <div class="price-pro">
+                <span>$12.3</span>
+                <button>Order Now</button>
+            </div>
+        </div>
+        <!-- product item 5 -->
+        <div class="products">
+            <img src="https://i.pinimg.com/1200x/3f/48/09/3f4809c50c14f1fad3ac36f3b7278d11.jpg" class="pro-img" />
+            <h1>Bag</h1>
+            <p class="product-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illum.
+            </p>
+            <div class="price-pro">
+                <span>$12.3</span>
+                <button>Order Now</button>
+            </div>
+        </div>
+        <!-- product item 6-->
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/e4/fd/f1/e4fdf16bec0b0912b200c510048b9c52.jpg" class="pro-img" />
+            <h1>Bag</h1>
+            <p class="product-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, illum.
+            </p>
+            <div class="price-pro">
+                <span>$12.3</span>
+                <button>Order Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
