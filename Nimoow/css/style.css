@@ -1,0 +1,332 @@
+/* Reset styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General styles */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    line-height: 1.6;
+    background: honeydew;
+    color: #333;
+    overflow-x: hidden;
+    font-family: monospace;
+}
+
+
+/* Container */
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Overlay main layer */
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* Overlay gradient */
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 25, 112, 0.5);
+    z-index: -1;
+}
+
+
+/* Decorative curved shape at bottom */
+
+.container::after {
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: honeydew;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    z-index: 3;
+}
+
+
+/* Video Background */
+
+.vd-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.vd-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Header */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    /* Light glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+
+/* Logo */
+
+.log img {
+    width: 100%;
+    max-width: 80px;
+    object-fit: cover;
+}
+
+
+/* Nav */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.list-items {
+    list-style: none;
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Welcome Section */
+
+.welcoming-messsage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+}
+
+.wel-header {
+    font-size: 2.5rem;
+    font-family: monospace;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    animation: typing 3s steps(39) infinite alternate, blink step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 39ch;
+    }
+}
+
+.para-welcoming {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/* Button */
+
+.btn-book {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: dodgerblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-book:hover {
+    background: #005fcb;
+}
+
+
+/* about us section */
+
+.about-us {
+    position: relative;
+}
+
+.about-title {
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.content-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.pic-about {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    object-fit: cover;
+    padding: 20px;
+}
+
+.about-descr {
+    width: 100%;
+    max-width: 700px;
+    font-size: 2rem;
+}
+
+
+/* content clips */
+
+
+/* layout style */
+
+.section-video-container {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+.section-video-container p {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-family: display;
+}
+
+.content-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.content-videos video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section-video-container h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-video-container h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 100px;
+    height: 2px;
+    background-color: goldenrod;
+}
+
+
+/* our content clips */
+
+
+/* Text that appears on hover */
+
+
+/* Gallery nav buttons */
+
+.gallery-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.gallery-items img {
+    width: 80%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.center-img {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    position: absolute;
+    top: 20%;
+    right: -1%;
+}
+
+.center-img img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    transform: translateX(10%);
+}
+
+.center-img img:hover {
+    transform: scale(1.01);
+}
+
+#gallery h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#gallery h2::after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid #ffda79;
+    width: 100px;
+    margin: 0 auto;
+}
